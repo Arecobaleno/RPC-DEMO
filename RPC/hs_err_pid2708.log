@@ -1,0 +1,159 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=2708, tid=0x0000000000000c4c
+#
+# JRE version:  (8.0_181-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.181-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000037a4000):  JavaThread "Unknown thread" [_thread_in_vm, id=3148, stack(0x0000000003580000,0x0000000003680000)]
+
+Stack: [0x0000000003580000,0x0000000003680000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000037a4000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3148, stack(0x0000000003580000,0x0000000003680000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 37888K, used 655K [0x00000000d6200000, 0x00000000d8c00000, 0x0000000100000000)
+  eden space 32768K, 2% used [0x00000000d6200000,0x00000000d62a3d80,0x00000000d8200000)
+  from space 5120K, 0% used [0x00000000d8700000,0x00000000d8700000,0x00000000d8c00000)
+  to   space 5120K, 0% used [0x00000000d8200000,0x00000000d8200000,0x00000000d8700000)
+ ParOldGen       total 86016K, used 0K [0x0000000082600000, 0x0000000087a00000, 0x00000000d6200000)
+  object space 86016K, 0% used [0x0000000082600000,0x0000000082600000,0x0000000087a00000)
+ Metaspace       used 775K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012c60000,0x0000000013050000] byte_map_base: 0x000000001284d000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005e492d00
+ Begin Bits: [0x0000000013af0000, 0x0000000015a58000)
+ End Bits:   [0x0000000015a58000, 0x00000000179c0000)
+
+Polling page: 0x00000000018d0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000038a0000, 0x0000000003b10000, 0x00000000128a0000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.033 loading class java/lang/Short
+Event: 0.033 loading class java/lang/Short done
+Event: 0.033 loading class java/lang/Integer
+Event: 0.033 loading class java/lang/Integer done
+Event: 0.033 loading class java/lang/Long
+Event: 0.033 loading class java/lang/Long done
+Event: 0.034 loading class java/lang/NullPointerException
+Event: 0.034 loading class java/lang/NullPointerException done
+Event: 0.034 loading class java/lang/ArithmeticException
+Event: 0.034 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7899f0000 - 0x00007ff789a27000 	D:\JDK1.8\bin\java.exe
+0x00007fffb7060000 - 0x00007fffb7250000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fffb5d30000 - 0x00007fffb5de2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fffb4420000 - 0x00007fffb46c5000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fffb63a0000 - 0x00007fffb6443000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fffb6f80000 - 0x00007fffb701e000 	C:\Windows\System32\msvcrt.dll
+0x00007fffb6de0000 - 0x00007fffb6e77000 	C:\Windows\System32\sechost.dll
+0x00007fffb59b0000 - 0x00007fffb5acf000 	C:\Windows\System32\RPCRT4.dll
+0x00007fffb5700000 - 0x00007fffb5894000 	C:\Windows\System32\USER32.dll
+0x00007fffb50e0000 - 0x00007fffb5101000 	C:\Windows\System32\win32u.dll
+0x00007fffb6d50000 - 0x00007fffb6d76000 	C:\Windows\System32\GDI32.dll
+0x00007fffb41e0000 - 0x00007fffb4378000 	C:\Windows\System32\gdi32full.dll
+0x00007fffb4380000 - 0x00007fffb441e000 	C:\Windows\System32\msvcp_win.dll
+0x00007fffb4020000 - 0x00007fffb411a000 	C:\Windows\System32\ucrtbase.dll
+0x00007fff93a10000 - 0x00007fff93c94000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1440_none_9e7dbfb9e45e8e67\COMCTL32.dll
+0x00007fffb5350000 - 0x00007fffb5686000 	C:\Windows\System32\combase.dll
+0x00007fffb4150000 - 0x00007fffb41d1000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fffb6530000 - 0x00007fffb655e000 	C:\Windows\System32\IMM32.DLL
+0x000000005edf0000 - 0x000000005eec2000 	D:\JDK1.8\jre\bin\msvcr100.dll
+0x000000005dc70000 - 0x000000005e512000 	D:\JDK1.8\jre\bin\server\jvm.dll
+0x00007fffb6f50000 - 0x00007fffb6f58000 	C:\Windows\System32\PSAPI.DLL
+0x00007fffa4a20000 - 0x00007fffa4a44000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fffaa500000 - 0x00007fffaa50a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fffa6800000 - 0x00007fffa6809000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fffb5690000 - 0x00007fffb56ff000 	C:\Windows\System32\WS2_32.dll
+0x00007fffa3ad0000 - 0x00007fffa3afd000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007fffb3fd0000 - 0x00007fffb401a000 	C:\Windows\System32\cfgmgr32.dll
+0x000000005ede0000 - 0x000000005edef000 	D:\JDK1.8\jre\bin\verify.dll
+0x000000005edb0000 - 0x000000005edd9000 	D:\JDK1.8\jre\bin\java.dll
+0x000000005ed20000 - 0x000000005ed43000 	D:\JDK1.8\jre\bin\instrument.dll
+0x000000005ed90000 - 0x000000005eda6000 	D:\JDK1.8\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -javaagent:D:\IDEA\IntelliJ IDEA 2020.1.2\lib\idea_rt.jar=63787:D:\IDEA\IntelliJ IDEA 2020.1.2\bin -Dfile.encoding=UTF-8 
+java_command: org.example.controller.BasicController
+java_class_path (initial): D:\JDK1.8\jre\lib\charsets.jar;D:\JDK1.8\jre\lib\deploy.jar;D:\JDK1.8\jre\lib\ext\access-bridge-64.jar;D:\JDK1.8\jre\lib\ext\cldrdata.jar;D:\JDK1.8\jre\lib\ext\dnsns.jar;D:\JDK1.8\jre\lib\ext\jaccess.jar;D:\JDK1.8\jre\lib\ext\jfxrt.jar;D:\JDK1.8\jre\lib\ext\localedata.jar;D:\JDK1.8\jre\lib\ext\nashorn.jar;D:\JDK1.8\jre\lib\ext\sunec.jar;D:\JDK1.8\jre\lib\ext\sunjce_provider.jar;D:\JDK1.8\jre\lib\ext\sunmscapi.jar;D:\JDK1.8\jre\lib\ext\sunpkcs11.jar;D:\JDK1.8\jre\lib\ext\zipfs.jar;D:\JDK1.8\jre\lib\javaws.jar;D:\JDK1.8\jre\lib\jce.jar;D:\JDK1.8\jre\lib\jfr.jar;D:\JDK1.8\jre\lib\jfxswt.jar;D:\JDK1.8\jre\lib\jsse.jar;D:\JDK1.8\jre\lib\management-agent.jar;D:\JDK1.8\jre\lib\plugin.jar;D:\JDK1.8\jre\lib\resources.jar;D:\JDK1.8\jre\lib\rt.jar;D:\IDEA_project\rpc-basic\target\classes;D:\IDEA_project\rpc-user-api\target\classes;D:\IDEA_project\netty-consumer\target\classes;C:\Users\CZY\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\org\springframework\spring-test\5.2.8.RELEASE\spring-test-5.2.8.RELEASE.jar;C:\Users\CZY\.m2\repository\com\alibaba\fastjson\1.2.51\fastjson-1.2.51.jar;C:\Users\CZY\.m2\repository\io\netty\netty-all\4.1.6.Final\netty-all-4.1.6.Final.jar;C:\Users\CZY\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\CZY\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\CZY\.m2\repository\o
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\JDK1.8
+CLASSPATH=.;D:\JDK1.8\lib\dt.jar;D:\JDK1.8\lib\tools.jar;
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NetSarang\Xftp 6\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\putty\;C:\Users\CZY\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;D:\JDK1.8\bin;D:\JDK1.8\jre\bin;D:\TDM-GCC-64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nodejs\;C:\ProgramData\chocolatey\bin;D:\Git\cmd;D:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Users\CZY\AppData\Local\Android\Sdk\platform-tools;C:\Users\CZY\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\CZY\AppData\Local\Programs\Python\Python37-32\;C:\Users\CZY\AppData\Local\Microsoft\WindowsApps;D:\anaconda;D:\anaconda\Scripts;D:\PyCharm 2019.1.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include;D:\anaconda\Library\bin;D:\R-3.6.1\bin;D:\jdk-13.0\bin;C:\Users\CZY\AppData\Local\GitHubDesktop\bin;D:\Microsoft VS Code\bin;C:\Users\CZY\AppData\Local\Microsoft\WindowsApps;D:\mysql\bin;C:\Users\CZY\AppData\Roaming\npm;D:\IDEA\IntelliJ IDEA 2020.1.2\bin;;D:\CLion 2020.2.3\bin;;D:\DataGrip 2020.2.3\bin;
+USERNAME=CZY
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.1350)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8230644k(1229468k free), swap 13271636k(5548k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.181-b13) for windows-amd64 JRE (1.8.0_181-b13), built on Jul  7 2018 04:01:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Mar 19 14:09:38 2021
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
